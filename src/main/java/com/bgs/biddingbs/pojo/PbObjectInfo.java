@@ -57,6 +57,9 @@ public class PbObjectInfo implements Serializable {
     @ApiModelProperty(value = "竞价开始时间")
     private Date bidStartTime;
 
+    @ApiModelProperty(value = "竞价开始时间")
+    private Date bidEndTime;
+
     @ApiModelProperty(value = "优先权竞买人类别")
     private Integer priorityBidType;
 

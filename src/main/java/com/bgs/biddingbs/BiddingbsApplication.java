@@ -17,7 +17,6 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 public class BiddingbsApplication {
     public static void main(String[] args) {
         SpringApplication.run(BiddingbsApplication.class, args);
-        System.out.println(123);
     }
     @Bean
     public RedisTemplate<String,Object> redisTemplate(RedisConnectionFactory redisConnertionFactory){

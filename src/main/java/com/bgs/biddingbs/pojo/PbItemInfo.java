@@ -26,7 +26,10 @@ public class PbItemInfo implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty(value = "项目交易申请id")
-    @TableId(value = "apply_id", type = IdType.AUTO)
+    @TableId(value = "item_id", type = IdType.AUTO)
+    private Integer itemId;
+
+    @ApiModelProperty(value = "项目交易申请id")
     private Integer applyId;
 
     @ApiModelProperty(value = "项目名称")
@@ -104,6 +107,9 @@ public class PbItemInfo implements Serializable {
     @ApiModelProperty(value = "竞买资格要求")
     private String bidderQual;
 
+    @ApiModelProperty(value = "'竞价规则设置'")
+    private String bidRule ;
+
     @ApiModelProperty(value = "是否在外网展示时间和地点")
     private String isShow;
 
@@ -157,6 +163,5 @@ public class PbItemInfo implements Serializable {
 
     @ApiModelProperty(value = "是否删除")
     private String isDel;
-
 
 }
