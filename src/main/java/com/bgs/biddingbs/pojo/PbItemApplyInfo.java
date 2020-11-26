@@ -5,10 +5,13 @@ import java.util.Date;
 import com.baomidou.mybatisplus.annotation.Version;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import org.springframework.format.annotation.DateTimeFormat;
 
 /**
  * <p>
@@ -68,6 +71,8 @@ public class PbItemApplyInfo implements Serializable {
     @ApiModelProperty(value = "更新用户GUID")
     private Integer updateUserId;
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @ApiModelProperty(value = "创建时间")
     private Date createTime;
 
@@ -86,5 +91,6 @@ public class PbItemApplyInfo implements Serializable {
     @ApiModelProperty(value = "分派人")
     private String assignRole;
 
+    private String approval;
 
 }
